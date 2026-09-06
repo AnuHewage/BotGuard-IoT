@@ -184,3 +184,60 @@ export const trafficRecords = [
     prediction: "Botnet",
   },
 ];
+export const detectionResults = [
+  {
+    timestamp: "10:32:15",
+    source: "192.168.1.25",
+    destination: "45.33.21.10",
+    protocol: "TCP",
+    prediction: "Botnet",
+    confidence: "98.5%",
+  },
+  {
+    timestamp: "10:35:42",
+    source: "192.168.1.18",
+    destination: "8.8.8.8",
+    protocol: "UDP",
+    prediction: "Normal",
+    confidence: "96.2%",
+  },
+  {
+    timestamp: "10:41:08",
+    source: "192.168.1.45",
+    destination: "104.21.55.12",
+    protocol: "TCP",
+    prediction: "Botnet",
+    confidence: "97.8%",
+  },
+];
+
+export const modelPerformance = [
+  {
+    name:"Decision Tree",
+    accuracy:"95.4%",
+    precision:"94.8%",
+    recall:"95.1%",
+    f1:"94.9%"
+  },
+  {
+    name:"Random Forest",
+    accuracy:"98.7%",
+    precision:"98.5%",
+    recall:"98.8%",
+    f1:"98.6%"
+  },
+  {
+    name:"Logistic Regression",
+    accuracy:"94.8%",
+    precision:"94.2%",
+    recall:"94.6%",
+    f1:"94.4%"
+  },
+  {
+    name:"Naive Bayes",
+    accuracy:"93.6%",
+    precision:"93.1%",
+    recall:"93.8%",
+    f1:"93.4%"
+  }
+];
