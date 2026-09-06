@@ -1,4 +1,4 @@
-# 🛡️ BotGuard AI
+# 🛡️ BotGuard IOT
 
 ## Early Detection of IoT Botnet Attacks Using Lightweight Network Traffic Profiling
 
