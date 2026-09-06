@@ -1,6 +1,28 @@
 import { Bell, UserCircle } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { alertData } from "../data/mockData";
+import NotificationPanel from "./alerts/NotificationPanel";
 
 const Header = () => {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const notificationRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        notificationRef.current &&
+        !notificationRef.current.contains(event.target)
+      ) {
+        setShowNotifications(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header
       className="
@@ -16,8 +38,11 @@ const Header = () => {
     "
     >
       {/* Left */}
+
       <div>
-        <h1 className="text-lg font-semibold">IoT Botnet Detection System</h1>
+        <h1 className="text-lg font-semibold text-white">
+          IoT Botnet Detection System
+        </h1>
 
         <p className="text-xs text-slate-400">
           Research & ML Analysis Platform
@@ -25,8 +50,10 @@ const Header = () => {
       </div>
 
       {/* Right */}
+
       <div className="flex items-center gap-5">
         {/* Model Status */}
+
         <div
           className="
           flex 
@@ -45,36 +72,45 @@ const Header = () => {
         </div>
 
         {/* Notification */}
-        <button
-          className="
-          relative
-          text-slate-300
-          hover:text-white
-        "
-        >
-          <Bell size={22} />
 
-          <span
+        <div className="relative" ref={notificationRef}>
+          <button
+            onClick={() => setShowNotifications(!showNotifications)}
             className="
-            absolute
-            -top-1
-            -right-1
-            bg-red-500
-            text-white
-            text-[10px]
-            w-4
-            h-4
-            rounded-full
-            flex
-            items-center
-            justify-center
-          "
+              relative
+              text-slate-300
+              hover:text-white
+            "
           >
-            3
-          </span>
-        </button>
+            <Bell size={22} />
+
+            <span
+              className="
+              absolute
+              -top-1
+              -right-1
+              bg-red-500
+              text-white
+              text-[10px]
+              w-4
+              h-4
+              rounded-full
+              flex
+              items-center
+              justify-center
+            "
+            >
+              {alertData.summary.active}
+            </span>
+          </button>
+
+          {showNotifications && (
+            <NotificationPanel closePanel={() => setShowNotifications(false)} />
+          )}
+        </div>
 
         {/* User */}
+
         <div
           className="
           flex
@@ -85,7 +121,7 @@ const Header = () => {
           <UserCircle size={38} className="text-slate-300" />
 
           <div>
-            <p className="text-sm font-medium">Admin Researcher</p>
+            <p className="text-sm font-medium text-white">Admin Researcher</p>
 
             <p className="text-xs text-slate-400">Administrator</p>
           </div>

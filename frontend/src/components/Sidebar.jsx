@@ -9,6 +9,7 @@ import {
   BrainCircuit,
   Upload,
   Settings,
+  BellRing,
 } from "lucide-react";
 
 const menuItems = [
@@ -41,6 +42,11 @@ const menuItems = [
     name: "Settings",
     path: "/settings",
     icon: Settings,
+  },
+  {
+    name: "Alert & Notification",
+    path: "/alerts",
+    icon: BellRing,
   },
 ];
 
@@ -91,7 +97,7 @@ const Sidebar = () => {
               text-white
             "
           >
-            BotGuard AI
+            BotGuard IoT
           </h1>
 
           <p
@@ -132,7 +138,7 @@ const Sidebar = () => {
             }
           >
             <div className="flex items-center gap-3">
-              <item.icon size={20} />
+              {item.icon && <item.icon size={20} />}
 
               <span>{item.name}</span>
             </div>
