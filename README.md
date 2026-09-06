@@ -1,78 +1,84 @@
-# 🛡️ BotGuard IOT
+# 🛡️ BotGuard IoT
 
 ## Early Detection of IoT Botnet Attacks Using Lightweight Network Traffic Profiling
 
-BotGuard IOT is a research-based IoT security analytics platform designed to detect IoT botnet attacks at an early stage using lightweight network traffic profiling and machine learning techniques.
 
-The system analyzes IoT network traffic behaviour, extracts important traffic features, and applies machine learning models to classify network activities as normal or botnet-related traffic.
+BotGuard IoT is a research-based IoT security monitoring platform designed to detect IoT botnet attacks using lightweight network traffic analysis and machine learning techniques.
+
+The system focuses on analyzing IoT network traffic patterns, extracting important traffic features, and identifying abnormal behaviors associated with botnet activities.
 
 The main objective of this research is to develop an efficient and lightweight detection approach suitable for resource-constrained IoT environments.
 
----
-
-# 📌 Research Overview
-
-The rapid growth of Internet of Things (IoT) devices has created significant cybersecurity challenges. Due to limited computational resources and weak security mechanisms, IoT devices are highly vulnerable to malware infections and botnet attacks.
-
-Traditional security approaches mainly depend on signature-based detection methods, which are ineffective against unknown and evolving threats.
-
-This research proposes a lightweight machine learning-based solution that focuses on early detection of IoT botnet attacks by analysing network traffic patterns without requiring payload inspection.
 
 ---
 
-# 🎯 Research Aim
+# 📌 Project Overview
 
-To develop a lightweight and efficient system for early detection of IoT botnet attacks using network traffic profiling and machine learning techniques.
+
+Internet of Things (IoT) devices are increasingly vulnerable to cyber attacks due to limited security capabilities and computational resources.
+
+Among these threats, IoT botnet attacks are a major concern because compromised devices can be controlled remotely and used for malicious activities such as Distributed Denial of Service (DDoS) attacks.
+
+BotGuard IoT aims to provide an intelligent detection platform that analyzes network traffic behavior and identifies potential botnet activities at an early stage using machine learning models.
+
 
 ---
 
 # 🎯 Research Objectives
 
-- Analyze differences between normal IoT traffic and botnet attack traffic.
-- Identify early-stage indicators of botnet activities.
+
+The main objectives of BotGuard IoT are:
+
+
+- Analyze IoT network traffic patterns to identify abnormal behavior.
 - Extract lightweight network traffic features for efficient detection.
-- Develop a machine learning-based botnet detection framework.
-- Evaluate detection accuracy and computational efficiency.
-
----
-
-# 🚀 Main Features
-
-## 📊 Security Monitoring Dashboard
-
-Provides an overview of the IoT network security status.
-
-Features:
-
-- Total traffic samples
-- Detected botnet attacks
-- Detection accuracy
-- Active machine learning models
-- Traffic visualization
-- Recent threat activities
+- Apply machine learning models for botnet traffic classification.
+- Evaluate detection performance using ML evaluation metrics.
+- Develop a practical security monitoring platform for IoT environments.
 
 
 ---
+
+# ✨ Current System Features
+
+
+## 📊 Dashboard Overview
+
+Provides a centralized monitoring interface including:
+
+- Network traffic statistics
+- Detected botnet attack information
+- Machine learning model status
+- Recent threat detection summary
+
 
 ## 🌐 Traffic Analysis
 
-Analyzes network traffic behaviour using flow-based features.
-
-Analyzed features:
+Allows analysis of IoT network traffic characteristics:
 
 - Average packet size
 - Packet rate
 - Flow duration
-- Number of packets per flow
-- Protocol behaviour
-- Service indicators
+- Packets per flow
+- Protocol distribution
+- Network feature information
 
 
----
+## 🔍 Detection Results
 
-## 🤖 Machine Learning Detection
+Displays machine learning prediction results:
 
-The system uses lightweight classification algorithms:
+- Detected traffic classification
+- Botnet / Normal traffic identification
+- Confidence score
+- Detection information
+
+
+## 🤖 Model Performance Monitoring
+
+Provides comparison of machine learning models:
+
+Currently considered models:
 
 - Random Forest
 - Decision Tree
@@ -80,342 +86,96 @@ The system uses lightweight classification algorithms:
 - Naive Bayes
 
 
-These models classify network traffic into:
+Displays:
 
-- Normal Traffic
-- Botnet Traffic
+- Accuracy
+- Precision
+- Recall
+- F1-score
 
-
----
-
-## 🚨 Threat Detection & Alert System
-
-Provides security monitoring capabilities:
-
-- Detected attack information
-- Confidence score
-- Threat severity
-- Detection timestamp
-- Network information
-
-
----
 
 ## 📂 Dataset Management
 
-Supports IoT dataset preparation.
+Provides an interface for:
 
-Functions:
-
-- Dataset upload
-- Dataset validation
+- IoT dataset uploading
+- Dataset information viewing
 - Feature preview
-- Data preparation for ML processing
+- Data validation
+
+
+## 🚨 Alert & Notification System
+
+Provides security monitoring capabilities:
+
+- Threat alerts
+- Severity classification
+- Alert details
+- Security event tracking
 
 
 ---
 
-# 🔄 System Workflow
-
-
-The BotGuard AI system follows a machine learning-based workflow to detect IoT botnet attacks by analyzing network traffic behaviour.
-             IoT Network Traffic
-
-                     ↓
-
-          Dataset Collection
-
-                     ↓
-
-          Data Preprocessing
-
-                     ↓
-
-         Lightweight Feature Extraction
-
-                     ↓
-
-          Machine Learning Models
-
-    (Random Forest, Decision Tree,
-    Logistic Regression, Naive Bayes)
-
-                     ↓
-
-          Traffic Classification
-
-      (Normal Traffic / Botnet Traffic)
-
-                     ↓
-
-          Detection Results Generation
-
-                     ↓
-
-          Threat Analysis & Alert System
-
-                     ↓
-
-          Security Monitoring Dashboard
-
-### Workflow Description
-
-**1. IoT Network Traffic Collection**
-
-Network traffic data generated by IoT devices is collected from benchmark datasets such as CIC-IoT-2023.
-
-**2. Data Preprocessing**
-
-The collected traffic data is cleaned and prepared by:
-
-- Removing missing and duplicate records
-- Handling invalid values
-- Normalizing feature values
-- Preparing training and testing data
-
-
-**3. Lightweight Feature Extraction**
-
-Important network traffic characteristics are extracted to reduce computational complexity.
-
-Selected features include:
-
-- Average packet size
-- Packet rate
-- Flow duration
-- Number of packets per flow
-- Protocol information
-
-
-**4. Machine Learning Detection**
-
-The extracted features are provided to lightweight machine learning models:
-
-- Random Forest
-- Decision Tree
-- Logistic Regression
-- Naive Bayes
-
-
-The models analyze traffic patterns and classify network activities.
-
-
-**5. Traffic Classification**
-
-The system predicts whether the network traffic represents:
-
-- Normal IoT communication
-- Potential botnet attack activity
-
-
-**6. Detection Results & Alert Generation**
-
-Detected threats are stored and displayed with:
-
-- Attack information
-- Confidence score
-- Detection time
-- Network details
-
-
-**7. Security Monitoring Dashboard**
-
-The final results are visualized through the BotGuard AI dashboard, allowing users to monitor IoT network security status.
----
-
-# 🧠 Machine Learning Approach
-
-## Dataset
-
-### Primary Dataset
-
-**CIC-IoT-2023**
-
-Used for initial implementation.
-
-Contains:
-
-- Normal IoT traffic
-- Mirai botnet attack traffic
-- Labelled network traffic flows
-
-
-### Secondary Dataset
-
-**Bot-IoT Dataset**
-
-Used for future validation and comparison.
-
-
----
-
-# 🔍 Lightweight Network Features
-
-The system focuses on computationally efficient traffic features.
-
-
-| Feature | Description |
-|----------|-------------|
-| Average Packet Size | Average size of transmitted packets |
-| Packet Rate | Number of packets transmitted per second |
-| Flow Duration | Communication duration of a network flow |
-| Packets Per Flow | Total packets exchanged in a flow |
-| Protocol Type | TCP, UDP and ICMP behaviour |
-| Service Indicators | Network service behaviour |
-
-
----
-
-# 🏗️ System Architecture
-
-
-          IoT Network Traffic
-
-                  ↓
-
-      Lightweight Feature Extraction
-
-                  ↓
-
-          Machine Learning Engine
-
-                  ↓
-
-         Botnet Traffic Detection
-
-                  ↓
-
-          BotGuard AI Dashboard
-
----
-
-# 🛠️ Technology Stack
-
-
-## Frontend
-
-- React.js
-- Vite
-- Tailwind CSS
-- React Router
-- Lucide React
-
-
-## Machine Learning
-
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
-
-
-## Data Processing
-
-- CICFlowMeter
-- CSV Dataset Processing
-
-
-## Visualization
-
-- Chart Libraries
-
-
----
-# 📁 Project Structure
+# ⚙️ System Workflow
 
 
 ```
-BotGuard-IOT
+IoT Network Traffic Data
+
+          ↓
+
+Data Preprocessing
+
+          ↓
+
+Lightweight Feature Extraction
+
+          ↓
+
+Machine Learning Model Analysis
+
+          ↓
+
+Botnet Detection
+
+          ↓
+
+Security Monitoring Dashboard
+
+          ↓
+
+Alert Generation
+```
+
+
+---
+
+# 🏗️ Project Structure
+
+
+```
+BotGuard-IoT
 │
 ├── frontend
 │   │
-│   ├── public
-│   │
 │   ├── src
-│   │   │
-│   │   ├── assets
-│   │   │
 │   │   ├── components
-│   │   │   ├── ChartCard.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── Header.jsx
-│   │   │   └── AlertComponents
-│   │   │
 │   │   ├── pages
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── TrafficAnalysis.jsx
-│   │   │   ├── DetectionResults.jsx
-│   │   │   ├── ModelPerformance.jsx
-│   │   │   ├── UploadDataset.jsx
-│   │   │   └── Alerts.jsx
-│   │   │
 │   │   ├── data
-│   │   │   └── mockData.js
-│   │   │
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   │
-│   └── package.json
-│
-│
-├── machine-learning
-│   │
-│   ├── dataset
-│   │   ├── CIC-IoT-2023
-│   │   └── Bot-IoT
-│   │
-│   ├── preprocessing
-│   │   └── data_cleaning.py
-│   │
-│   ├── feature-extraction
-│   │   └── feature_selection.py
-│   │
-│   ├── models
-│   │   ├── random_forest.py
-│   │   ├── decision_tree.py
-│   │   ├── logistic_regression.py
-│   │   └── naive_bayes.py
-│   │
-│   └── evaluation
-│       └── model_evaluation.py
-│
-│
-├── backend
-│   │
-│   ├── api
-│   │
-│   ├── database
-│   │
-│   └── server.js
-│
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── documentation
-│   │
 │   ├── Research Proposal
-│   ├── System Architecture
-│   ├── Diagrams
-│   └── Reports
-│
+│   ├── System Documents
+│   └── Diagrams
 │
 ├── README.md
 └── .gitignore
 ```
-
-
-
----
-
-# 🖥️ System Modules
-
-
-| Module | Description |
-|--------|-------------|
-| Dashboard | Overall security monitoring |
-| Traffic Analysis | Network traffic behaviour analysis |
-| Detection Results | ML prediction results |
-| Model Performance | Model evaluation comparison |
-| Upload Dataset | Dataset management |
-| Alert System | Threat notification management |
 
 
 ---
@@ -425,18 +185,22 @@ BotGuard-IOT
 
 ## Clone Repository
 
+
 ```bash
-git clone https://github.com/your-username/BotGuard-AI.git
+git clone https://github.com/your-username/BotGuard-IoT.git
 ```
 
-## Navigate to Frontend Directory
+
+## Navigate to Frontend
+
 
 ```bash
 cd frontend
 ```
 
 
-## Install Frontend Dependencies
+## Install Dependencies
+
 
 ```bash
 npm install
@@ -445,48 +209,30 @@ npm install
 
 ## Run Application
 
+
 ```bash
 npm run dev
 ```
-⚙️ Installation
 
-Clone Repository
-↓
-git clone command
 
-Navigate to Frontend Directory
-↓
-cd frontend
+---
 
-Install Dependencies
-↓
-npm install
+# 🚀 Future Development
 
-Run Application
-↓
-npm run dev
 
-#  📈 Model Evaluation Metrics
+Future improvements include:
 
-The machine learning models are evaluated using:
-Accuracy
-Precision
-Recall
-F1 Score
-False Positive Rate
-Detection Time
-Memory Usage
 
-# 🔮 Future Improvements
+- Backend API integration
+- Database connectivity
+- Real-time IoT traffic monitoring
+- Machine learning model integration
+- Automated threat detection pipeline
+- Real-time security alerts
+- Model training and evaluation integration
 
-Future enhancements include:
-Real-time IoT traffic monitoring
-Live packet capture integration
-Real-time ML prediction API
-WebSocket-based alerts
-Automated threat response
-Cloud deployment
-Advanced anomaly detection
+
+---
 
 # 👩‍💻 Research Team
 
@@ -495,15 +241,14 @@ Advanced anomaly detection
 
 
 **TG/2021/1069**  
-**H.M.D. Anuruddhika**
+H.M.D. Anuruddhika
 
 
 **TG/2021/1073**  
-**T.M.K.G.D.L. Thennakoon**
+T.M.K.G.D.L. Thennakoon
 
 
 ---
-
 
 # 🎓 Academic Information
 
@@ -526,11 +271,9 @@ University of Ruhuna
 
 ---
 
-
 # 📜 License
 
 
 This project is developed for academic research purposes only.
 
-The system is created as part of the Research Project module requirements for the Bachelor of Information and Communication Technology Honours degree program.
-```
+This research project is submitted as a partial fulfillment of the requirements for the Bachelor of Information and Communication Technology Honours degree.
