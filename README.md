@@ -2,7 +2,7 @@
 
 ## Early Detection of IoT Botnet Attacks Using Lightweight Network Traffic Profiling
 
-BotGuard AI is a research-based IoT security analytics platform designed to detect IoT botnet attacks at an early stage using lightweight network traffic profiling and machine learning techniques.
+BotGuard IOT is a research-based IoT security analytics platform designed to detect IoT botnet attacks at an early stage using lightweight network traffic profiling and machine learning techniques.
 
 The system analyzes IoT network traffic behaviour, extracts important traffic features, and applies machine learning models to classify network activities as normal or botnet-related traffic.
 
@@ -325,7 +325,7 @@ The system focuses on computationally efficient traffic features.
 
 
 ```
-BotGuard-AI
+BotGuard-IOT
 │
 ├── frontend
 │   │
