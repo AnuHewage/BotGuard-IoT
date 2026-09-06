@@ -260,4 +260,61 @@ export const datasetFeatures = [
   "Protocol Type",
   "Packets Per Flow",
 ];
+export const alertData = {
+  summary: {
+    active: 12,
+    critical: 3,
+    high: 5,
+    resolved: 25,
+  },
 
+  alerts: [
+    {
+      id: 1,
+      type: "Botnet Attack Detected",
+      severity: "Critical",
+      source: "192.168.1.45",
+      destination: "10.0.0.15",
+      protocol: "TCP",
+      confidence: "98.7%",
+      model: "Random Forest",
+      time: "2 minutes ago",
+    },
+
+    {
+      id: 2,
+      type: "Suspicious Network Traffic",
+      severity: "High",
+      source: "192.168.1.28",
+      destination: "10.0.0.20",
+      protocol: "UDP",
+      confidence: "91.4%",
+      model: "Decision Tree",
+      time: "15 minutes ago",
+    },
+
+    {
+      id: 3,
+      type: "Abnormal Packet Pattern",
+      severity: "Medium",
+      source: "192.168.1.60",
+      destination: "10.0.0.30",
+      protocol: "TCP",
+      confidence: "84.6%",
+      model: "Logistic Regression",
+      time: "35 minutes ago",
+    },
+
+    {
+      id: 4,
+      type: "Unknown Traffic Behaviour",
+      severity: "Low",
+      source: "192.168.1.75",
+      destination: "10.0.0.40",
+      protocol: "UDP",
+      confidence: "76.2%",
+      model: "Naive Bayes",
+      time: "1 hour ago",
+    },
+  ],
+};
