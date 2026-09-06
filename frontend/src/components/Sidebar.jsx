@@ -1,39 +1,46 @@
+import { NavLink } from "react-router-dom";
 import {
-  LayoutDashboard,
-  Activity,
   ShieldCheck,
   Cpu,
+  LogOut,
+  LayoutDashboard,
+  Activity,
+  ShieldAlert,
+  BrainCircuit,
   Upload,
   Settings,
-  Database,
-  BrainCircuit,
-  LogOut,
 } from "lucide-react";
 
 const menuItems = [
   {
-    name: "Dashboard",
+    name: "Dashboard Overview",
+    path: "/",
     icon: LayoutDashboard,
   },
   {
     name: "Traffic Analysis",
+    path: "/traffic-analysis",
     icon: Activity,
   },
   {
     name: "Detection Results",
-    icon: ShieldCheck,
+    path: "/detection-results",
+    icon: ShieldAlert,
   },
   {
-    name: "ML Model Performance",
+    name: "Model Performance",
+    path: "/model-performance",
     icon: BrainCircuit,
   },
   {
-    name: "Dataset Management",
-    icon: Database,
+    name: "Upload Dataset",
+    path: "/upload-dataset",
+    icon: Upload,
   },
   {
-    name: "Upload Dataset",
-    icon: Upload,
+    name: "Settings",
+    path: "/settings",
+    icon: Settings,
   },
 ];
 
@@ -105,36 +112,32 @@ const Sidebar = () => {
           space-y-2
         "
       >
-        {menuItems.map((item, index) => {
-          const Icon = item.icon;
-
-          return (
-            <button
-              key={item.name}
-              className={`
-                  w-full
-                  flex
-                  items-center
-                  gap-3
-                  px-4
-                  py-3
-                  rounded-lg
-                  text-sm
-                  transition
-
-                  ${
-                    index === 0
-                      ? "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
-                      : "text-slate-300 hover:bg-slate-800 hover:text-white"
-                  }
-                `}
-            >
-              <Icon size={20} />
+        {menuItems.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className={({ isActive }) =>
+              `
+      block
+      px-4
+      py-3
+      rounded-lg
+      transition
+      ${
+        isActive
+          ? "bg-cyan-500/20 text-cyan-400"
+          : "text-slate-400 hover:text-white hover:bg-slate-800"
+      }
+      `
+            }
+          >
+            <div className="flex items-center gap-3">
+              <item.icon size={20} />
 
               <span>{item.name}</span>
-            </button>
-          );
-        })}
+            </div>
+          </NavLink>
+        ))}
       </nav>
 
       {/* Bottom Info */}

@@ -95,3 +95,92 @@ export const trafficData = [
     botnet: 100,
   },
 ];
+
+export const trafficSummary = [
+  {
+    title: "Average Packet Size",
+    value: "512 Bytes",
+    description: "Average size of packets in IoT traffic",
+  },
+  {
+    title: "Packet Rate",
+    value: "245 Packets/s",
+    description: "Network packets processed per second",
+  },
+  {
+    title: "Flow Duration",
+    value: "3.8 Seconds",
+    description: "Average duration of network flows",
+  },
+  {
+    title: "Packets Per Flow",
+    value: "86",
+    description: "Average packets transmitted per flow",
+  },
+];
+
+
+export const protocolData = [
+  {
+    protocol: "TCP",
+    value: 65,
+  },
+  {
+    protocol: "UDP",
+    value: 30,
+  },
+  {
+    protocol: "HTTP",
+    value: 5,
+  },
+];
+
+
+export const featureData = [
+  {
+    feature: "Average Packet Size",
+    value: "512 Bytes",
+  },
+  {
+    feature: "Packet Rate",
+    value: "245 packets/s",
+  },
+  {
+    feature: "Flow Duration",
+    value: "3.8 sec",
+  },
+  {
+    feature: "Source Port",
+    value: "54321",
+  },
+  {
+    feature: "Destination Port",
+    value: "80",
+  },
+  {
+    feature: "Protocol Type",
+    value: "TCP",
+  },
+  {
+    feature: "Packets Per Flow",
+    value: "86",
+  },
+];
+
+
+export const trafficRecords = [
+  {
+    protocol: "TCP",
+    sourcePort: "54321",
+    destinationPort: "80",
+    packets: 120,
+    prediction: "Normal",
+  },
+  {
+    protocol: "UDP",
+    sourcePort: "41232",
+    destinationPort: "53",
+    packets: 250,
+    prediction: "Botnet",
+  },
+];
