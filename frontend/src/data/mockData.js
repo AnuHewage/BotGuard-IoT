@@ -241,3 +241,23 @@ export const modelPerformance = [
     f1:"93.4%"
   }
 ];
+
+export const datasetInfo = {
+  name: "IoT_Botnet_Dataset.csv",
+  records: "50,240",
+  features: 7,
+  size: "8.3 MB",
+  uploadedDate: "2026-09-06",
+  status: "Ready",
+};
+
+export const datasetFeatures = [
+  "Average Packet Size",
+  "Packet Rate",
+  "Flow Duration",
+  "Source Port",
+  "Destination Port",
+  "Protocol Type",
+  "Packets Per Flow",
+];
+
